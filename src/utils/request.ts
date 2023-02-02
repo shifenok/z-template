@@ -59,7 +59,7 @@ const requestHandler = (config: AxiosRequestConfig): AxiosRequestConfig | Promis
 }
 
 // Add a request interceptor
-request.interceptors.request.use(requestHandler, errorHandler)
+request.interceptors.request.use(requestHandler as any, errorHandler)
 
 // 响应拦截器
 const responseHandler = (response: { data: any }) => {
